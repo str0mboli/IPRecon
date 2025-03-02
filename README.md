@@ -33,7 +33,7 @@ SHA256 File Hash: D5B9CCB4E375068AEB909C5175A17CF201BB8D4D9CCF42F81CF617EAE04096
 - Create a python environment
   - conda create -p ./env python=3.12
 - Install dependencies     
-  - pip install customtkinter requests pandas tabulate
+  - pip install customtkinter requests pandas tabulate pillow
 - Run: python ip_recon_gui.py
 
 ---
