@@ -6,12 +6,15 @@ import pandas as pd
 import os
 import webbrowser
 from tabulate import tabulate
+from tkinter import filedialog
+from PIL import Image, ImageTk  # For handling the banner image
 
 # CustomTkinter settings
 ctk.set_appearance_mode("dark")  # Dark mode
 ctk.set_default_color_theme("blue")  # Theme color
 
 API_KEY_FILE = "api_key.txt"
+current_results_df = None  # Store the current results for CSV export
 
 # Function to save API key
 def save_api_key(api_key):
@@ -59,6 +62,7 @@ def check_ip_reputation(api_key, ip):
         return {"IP Address": ip, "Error": f"Failed to fetch data (Code: {response.status_code})"}
 
 def display_results(df):
+    global current_results_df
     result_box.configure(state="normal")  
     result_box.delete("1.0", "end")  
 
@@ -66,6 +70,7 @@ def display_results(df):
         result_box.insert("1.0", "⚠️ No results found!\n")
         status_label.configure(text="⚠️ No results found!", text_color="orange")
         result_box.configure(state="disabled")
+        save_csv_button.configure(state="disabled")  # Disable Save button if no results
         return
 
     table_text = tabulate(df, headers="keys", tablefmt="grid")
@@ -74,6 +79,8 @@ def display_results(df):
     result_box.configure(state="disabled")  
 
     status_label.configure(text="✅ IP check complete! Select and copy results.", text_color="green")
+    save_csv_button.configure(state="normal")  # Enable Save button when results exist
+    current_results_df = df  # Store the results for exporting
 
 def process_ips():
     api_key = load_api_key()
@@ -100,8 +107,25 @@ def store_api_key():
     if api_key:
         save_api_key(api_key)
         api_key_entry.pack_forget()  # Hide API Key input field
+        save_key_button.pack_forget()  # Hide the Save API Key button
         api_key_label.configure(text="✅ API Key stored successfully!", text_color="green")
         status_label.configure(text="API Key stored! You can now run IP Recon.", text_color="green")
+
+# Function to save results as CSV
+def save_results_csv():
+    global current_results_df
+    if current_results_df is None or current_results_df.empty:
+        return
+    
+    file_path = filedialog.asksaveasfilename(
+        defaultextension=".csv",
+        filetypes=[("CSV files", "*.csv")],
+        title="Save Results As"
+    )
+
+    if file_path:
+        current_results_df.to_csv(file_path, index=False)
+        status_label.configure(text="✅ Results saved successfully!", text_color="green")
 
 # Function to open GitHub repo
 def open_github():
@@ -109,43 +133,55 @@ def open_github():
 
 # Create the GUI window
 app = ctk.CTk()
-app.geometry("1250x875")  
+app.geometry("1250x800")  
 app.title("IP Recon - Bulk IP Reputation Checker")
+
+# Load and display banner image at 500x80 px
+try:
+    banner_image = ctk.CTkImage(Image.open("IPReconBanner.png"), size=(500, 80))
+    banner_label = ctk.CTkLabel(app, image=banner_image, text="")
+    banner_label.pack(pady=(5, 2))
+except Exception as e:
+    print(f"Error loading banner image: {e}")
 
 # Check if an API key is stored
 stored_api_key = load_api_key()
 
 # API Key Section (Only shown if no key is stored)
 api_key_label = ctk.CTkLabel(app, text="Enter AbuseIPDB API Key:")
-api_key_label.pack(pady=(15, 5))
+api_key_label.pack(pady=(5, 2))
 
 if not stored_api_key:
     api_key_entry = ctk.CTkEntry(app, width=900)
     api_key_entry.pack()
     save_key_button = ctk.CTkButton(app, text="Save API Key", command=store_api_key, width=250)
-    save_key_button.pack(pady=(10, 5))
+    save_key_button.pack(pady=(5, 2))
 else:
     api_key_label.configure(text="✅ API Key Loaded", text_color="green")
 
 # IP Input Section
 ip_input_label = ctk.CTkLabel(app, text="Enter IPs (use ctrl-v):")
-ip_input_label.pack(pady=(10, 5))
+ip_input_label.pack(pady=(5, 2))
 ip_input = ctk.CTkTextbox(app, height=200, width=900)
 ip_input.pack()
 
 submit_button = ctk.CTkButton(app, text="Run IP Recon", command=process_ips, width=250)
-submit_button.pack(pady=(10, 5))
+submit_button.pack(pady=(5, 2))
 
 status_label = ctk.CTkLabel(app, text="")
-status_label.pack(pady=(5, 5))
+status_label.pack(pady=(5, 2))
 
-# Fixed Results Box (Perfect Fit for 1250x875)
-result_box = ctk.CTkTextbox(app, height=350, width=1230, wrap="none", font=("Courier New", 12))
-result_box.pack(pady=(10, 5))
+# Fixed Results Box
+result_box = ctk.CTkTextbox(app, height=300, width=1230, wrap="none", font=("Courier New", 12))
+result_box.pack(pady=(5, 2))
+
+# Save Results as CSV Button
+save_csv_button = ctk.CTkButton(app, text="Save Results as CSV", command=save_results_csv, width=250, state="disabled")
+save_csv_button.pack(pady=(5, 2))
 
 # GitHub Hyperlink at Bottom Right
-github_label = ctk.CTkLabel(app, text="IP Recon By Str0mboli - Visit the GitHub for Updates", text_color="white", cursor="hand2")
-github_label.pack(side="right", padx=15, pady=(0, 15), anchor="se")  # Bottom-right corner
-github_label.bind("<Button-1>", lambda e: open_github())  # Clickable hyperlink
+github_label = ctk.CTkLabel(app, text="IP Recon v1.01 GitHub Repository", text_color="white", cursor="hand2")
+github_label.pack(side="right", padx=15, pady=(0, 15), anchor="se")
+github_label.bind("<Button-1>", lambda e: open_github())
 
 app.mainloop()
