@@ -10,6 +10,14 @@ You can get an API key free at [AbuseIPDB.com](https://www.abuseipdb.com/)
 
 After you enter your API key it will be saved within a .txt file. Going forward you will not need to reenter your API.
 
+
+![image](https://github.com/user-attachments/assets/1ce4d521-3e2c-4c8d-a0d4-d0d05b5d8585)
+
+![image](https://github.com/user-attachments/assets/465cd1b0-edf4-4a46-943e-c388260595e5)
+
+
+
+
 File Hash: D5B9CCB4E375068AEB909C5175A17CF201BB8D4D9CCF42F81CF617EAE0409606 SHA256
 
 ---
