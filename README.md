@@ -24,6 +24,10 @@ File Hash: D5B9CCB4E375068AEB909C5175A17CF201BB8D4D9CCF42F81CF617EAE0409606 SHA2
 
 **Installation Instructions**
 
+Clone the repository: git clone https://github.com/str0mboli/IPRecon.git
+
+cd Path\to\IPRecon
+
 Create a python environment
 
 conda create -p ./env python=3.12 
