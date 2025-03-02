@@ -1,4 +1,4 @@
-# IPRecon
+# IP Recon
 A Bulk IP Reputation Checker
 
 This project is intended to provide a simple tool for security professionals to quickly check IP addresses for abuse.
