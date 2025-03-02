@@ -18,32 +18,24 @@ After you enter your API key it will be saved within a .txt file. Going forward 
 
 
 
-File Hash: D5B9CCB4E375068AEB909C5175A17CF201BB8D4D9CCF42F81CF617EAE0409606 SHA256
+SHA256 File Hash: D5B9CCB4E375068AEB909C5175A17CF201BB8D4D9CCF42F81CF617EAE0409606
 
 ---
 
 **Installation Instructions**
 
-Clone the repository: git clone https://github.com/str0mboli/IPRecon.git
-
-cd Path\to\IPRecon
-
-Create a python environment
-
-conda create -p ./env python=3.12 
-
----
-**Dependancies**
-
-pip install customtkinter requests pandas tabulate
-
-
-Run: python ip_recon_gui.py
+- Clone the repository: git clone https://github.com/str0mboli/IPRecon.git
+  - cd Path\to\IPRecon
+- Open ip_recon_gui.py in editor of choice (I use VS Code)
+- Create a python environment
+  - conda create -p ./env python=3.12
+- Install dependencies     
+  - pip install customtkinter requests pandas tabulate
+- Run: python ip_recon_gui.py
 
 ---
 
 **To create a stand alone .exe**
 
-pip install pyinstaller
-
-pyinstaller --noconsole --onefile --name=IPRecon ip_recon_gui.py
+- pip install pyinstaller
+  - pyinstaller --noconsole --onefile --name=IPRecon ip_recon_gui.py
