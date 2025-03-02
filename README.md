@@ -1,14 +1,11 @@
 # IPRecon
-A bulk IP Scouter for AbuseIPDB
+A Bulk IP Reputation Checker
 
-This projct is intended to provide a simple tool for security professionals to quickly check IP addresses for abuse.
+This project is intended to provide a simple tool for security professionals to quickly check IP addresses for abuse.
 The program will extract IPv4 and IPv6 addresses from text, remove duplicates and private IPs, and then send the results to AbuseIPDB.
 The results are presented in simple table that you can copy suspect IPs from for deeper investigation.
 
+Once the program runs, You will be prompted for an AbuseIPDB API key.
+You can get an API key free at [AbuseIPDB.com](https://www.abuseipdb.com/)
 
-This program can be used as a script or as a .exe file. The .exe version is found in the IPRecon_Desktop folder.
-
-Once the program runs, tou will be prompted for an AbuseIPDB API key.
-You can get akey free at [AbuseIPDB.com](https://www.abuseipdb.com/)
-
-After you enter your API key it will be saved within a textfile and going forward you wont need to reenter your API
+After you enter your API key it will be saved within a .txt file. Going forward you will not need to reenter your API.
