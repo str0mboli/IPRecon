@@ -1,6 +1,6 @@
 # IP Recon
 
-<center>[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G61BDMMC)</center>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G61BDMMC)
 
 A Bulk IP Reputation Checker
 
