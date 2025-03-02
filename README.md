@@ -12,6 +12,7 @@ After you enter your API key it will be saved within a .txt file. Going forward 
 
 File Hash: D5B9CCB4E375068AEB909C5175A17CF201BB8D4D9CCF42F81CF617EAE0409606 SHA256
 
+---
 
 **Installation Instructions**
 
@@ -19,16 +20,18 @@ Create a python environment
 
 conda create -p ./env python=3.12 
 
-**Dependancies**
-
 ---
+**Dependancies**
 
 pip install customtkinter requests pandas tabulate
 
----
+
 Run: python ip_recon_gui.py
+
+---
 
 **To create a stand alone .exe**
 
 pip install pyinstaller
+
 pyinstaller --noconsole --onefile --name=IPRecon ip_recon_gui.py
