@@ -1,4 +1,5 @@
 3/1/2025 - Initial Commit of IPRecon_v1.0.exe
 3/2/2025 - Added the ability to export results as a CSV
   Added a logo and versioon number to the UI
+  New Dependency - pip install pillow
   Updated Version to v1.01
