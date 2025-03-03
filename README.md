@@ -2,6 +2,8 @@
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G61BDMMC)
 
+Current Version: 1.01
+
 A Bulk IP Reputation Checker
 
 This project is intended to provide a simple tool for security professionals to quickly check IP addresses for abuse.
