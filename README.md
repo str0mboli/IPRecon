@@ -1,3 +1,4 @@
+
 # IP Recon
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G61BDMMC)
@@ -20,7 +21,7 @@ After you enter your API key it will be saved within a .txt file. Going forward 
 
 ---
 
-**Dependancies**
+**Required Dependancies**
 
 - customtkinter: GUI framework for modern UI
 - pandas: Handles data processing & CSV export
@@ -28,18 +29,28 @@ After you enter your API key it will be saved within a .txt file. Going forward 
 - tabulate: Formats results into a table-like display
 - pillow: Handles image (banner) loading
 
+--
+
+**Optional Dependancies**
+
+- pyinstaller: allows the script to function as a standalone application
+
 ---
 
 **Installation Instructions**
 
-- Clone the repository: git clone https://github.com/str0mboli/IPRecon.git
+1: Clone the repository: git clone https://github.com/str0mboli/IPRecon.git
   - cd Path\to\IPRecon
-- Open ip_recon_gui.py in editor of choice (I use VS Code)
-- Create a python environment
+    
+2: Open ip_recon_gui.py in editor of choice (I use VS Code)
+
+3: Create a python environment
   - conda create -p ./env python=3.12
-- Install dependencies     
+    
+4: Install dependencies     
   - pip install customtkinter requests pandas tabulate pillow
-- Run: python ip_recon_gui.py
+    
+5: Run: python ip_recon_gui.py
 
 ---
 
