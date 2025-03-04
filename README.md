@@ -18,6 +18,15 @@ After you enter your API key it will be saved within a .txt file. Going forward 
 
 ![image](https://github.com/user-attachments/assets/3e8f6e83-0351-4033-a5e1-5750f344e271)
 
+---
+
+**Dependancies**
+
+- customtkinter: GUI framework for modern UI
+- pandas: Handles data processing & CSV export
+- requests: Makes API requests to AbuseIPDB
+- tabulate: Formats results into a table-like display
+- pillow: Handles image (banner) loading
 
 ---
 
