@@ -3,7 +3,7 @@
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G61BDMMC)
 
-Current Version: 1.01
+Current Version: 1.02
 
 A Bulk IP Reputation Checker
 
