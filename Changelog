@@ -1,5 +1,14 @@
 3/1/2025 - Initial Commit of IPRecon_v1.0.exe
+
 3/2/2025 - Added the ability to export results as a CSV
   Added a logo and versioon number to the UI
   New Dependency - pip install pillow
   Updated Version to v1.01
+
+3/22/2025
+  Addressed IPv6 bug. IPRecon should now recognize compressed notation properly
+  Added a clear results button.
+  Added a results output pane that formats IPs so that they are KQL query friendly.
+  Added fernet encryption: This encrypts the API key using machine based information.
+    The encrypted API key will only function on the device it was entered into. No more clear text API keys.
+  Updated Version to v1.02
