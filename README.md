@@ -59,4 +59,4 @@ After you enter your API key it will be saved within a .txt file. Going forward 
 **To create a stand alone .exe**
 
 - pip install pyinstaller
-  - pyinstaller --noconsole --onefile --name=IPRecon ip_recon_gui.py
+  - pyinstaller --onefile --windowed --add-data "IPReconBanner.png;." --icon=IPReconIcon.ico --name "IP Recon" ip_recon_gui.py
