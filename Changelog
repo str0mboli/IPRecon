@@ -6,11 +6,12 @@
   Updated Version to v1.01
 
 3/22/2025
-  Addressed IPv6 bug. IPRecon should now recognize compressed notation properly
+  Addressed IPv6 bug. IPRecon should now recognize compressed notation properly.
   Added a clear results button.
   Added a results output pane that formats IPs so that they are KQL query friendly.
-  New Dependancy: cyrptography
-  Added fernet encryption: This encrypts the API key using machine based information.
+  New Dependency: cryptography.
+  Added Fernet encryption: This encrypts the API key using machine-based information.
     The encrypted API key will only function on the device it was entered into. No more clear text API keys.
-  New App Icon
+  New App Icon.
+  RPReconBanner.png should now compile with the .exe and no longer be stored as a separate file when using the updated pyinstaller command.
   Updated Version to v1.02
