@@ -17,7 +17,8 @@ You can get an API key free at [AbuseIPDB.com](https://www.abuseipdb.com/)
 After you enter your API key it will be saved within a .txt file. Going forward you will not need to reenter your API.
 
 
-![image](https://github.com/user-attachments/assets/3e8f6e83-0351-4033-a5e1-5750f344e271)
+![RPReconScreenShot](https://github.com/user-attachments/assets/a443b8ac-f2be-4345-95f5-3eca274d9f4b)
+
 
 ---
 
@@ -28,6 +29,7 @@ After you enter your API key it will be saved within a .txt file. Going forward 
 - requests: Makes API requests to AbuseIPDB
 - tabulate: Formats results into a table-like display
 - pillow: Handles image (banner) loading
+- cryptography: Allows encrypted API Key Storage
 
 --
 
@@ -48,7 +50,7 @@ After you enter your API key it will be saved within a .txt file. Going forward 
   - conda create -p ./env python=3.12
     
 4: Install dependencies     
-  - pip install customtkinter requests pandas tabulate pillow
+  - pip install customtkinter requests pandas tabulate pillow cryptography
     
 5: Run: python ip_recon_gui.py
 
