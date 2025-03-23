@@ -17,7 +17,10 @@ The results are presented in simple table that you can copy suspect IPs from for
 Once the program runs, You will be prompted for an AbuseIPDB API key.
 You can get an API key free at [AbuseIPDB.com](https://www.abuseipdb.com/)
 
-After you enter your API key it will be saved within a .txt file. Going forward you will not need to reenter your API.
+FERNET API ENCRYPTION
+
+After you enter your API key, it is saved as an ecrypted file using AES and fernet technologies. You wont have to enter your API again.
+As an added bonus, the encrypted file uses your device as the key. Even if the API file was stolen it is useless unless ran on the machine that created it.
 
 
 ![image](https://github.com/user-attachments/assets/ba421360-4278-4a33-be0e-82487fa3ea2f)
