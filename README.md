@@ -22,6 +22,8 @@ FERNET API ENCRYPTION
 After you enter your API key, it is saved as an ecrypted file using AES and fernet technologies. You wont have to enter your API again.
 As an added bonus, the encrypted file uses your device as the key. Even if the API file was stolen it is useless unless ran on the machine that created it.
 
+-https://cryptography.io/en/latest/fernet/
+
 
 ![image](https://github.com/user-attachments/assets/ba421360-4278-4a33-be0e-82487fa3ea2f)
 
