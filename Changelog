@@ -15,3 +15,7 @@
   New App Icon.
   RPReconBanner.png should now compile with the .exe and no longer be stored as a separate file when using the updated pyinstaller command.
   Updated Version to v1.02
+
+3/24/2025
+  Released RP Recon NF Edition: This edition uses non-stored password based AES encryption instead of fernet. 
+  This should be more friendly to managed devices that may no appreciate IP Recon using machine statistics as an encryption key.
