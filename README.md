@@ -17,18 +17,39 @@ The results are presented in simple table that you can copy suspect IPs from for
 Once the program runs, You will be prompted for an AbuseIPDB API key.
 You can get an API key free at [AbuseIPDB.com](https://www.abuseipdb.com/)
 
-FERNET API ENCRYPTION
+
+
+<div align="center">
+  <h2>Chose Your Encryption Method</h2>
+</div>
+
+**FERNET API ENCRYPTION** - Standard Edition: ip_recon_gui.py
 
 After you enter your API key, it is saved as an ecrypted file using AES and fernet technologies. You wont have to enter your API again.
 As an added bonus, the encrypted file uses your device as the key. Even if the API file was stolen it is useless unless ran on the machine that created it.
 
 -https://cryptography.io/en/latest/fernet/
 
+--
+
+**NON-STORED PASSWORD BASED AES ENCRYPTION** - Non-Fernet Edition: ip_recon_gui_NF.py
+
+When you runt he program for the first time you will be prompted for a password and your API key. This stores your API as an encrypted file. Your password is not stored, it is hashed and used as the encryption key. 
+
+IP Recon will need to restart in order to finalize the encryption process. It will shut down after 10 seconds or the user can close the application and restart it. Once initial setup is complete you can unlock IP Recon with your password. Since passwords are not stored in the app there is no way to reset your password.
+
+Should you lose or forget your password, you will need to delete the api.key.encrypted file. Restart the program and enter a new word along with your API key.
+
+---
+
 
 ![image](https://github.com/user-attachments/assets/ba421360-4278-4a33-be0e-82487fa3ea2f)
 
 
 ![image](https://github.com/user-attachments/assets/41bd3b8a-1102-404f-92c1-6787ae489329)
+
+---
+
 
 
 ---
@@ -42,6 +63,10 @@ As an added bonus, the encrypted file uses your device as the key. Even if the A
 - pillow: Handles image (banner) loading
 - cryptography: Allows encrypted API Key Storage
 
+**RP Recon NF Edition Dependencies**
+
+- pycryptodome: Allows encrpyted API storage (replaces cryptography)
+
 --
 
 **Optional Dependancies**
@@ -49,6 +74,7 @@ As an added bonus, the encrypted file uses your device as the key. Even if the A
 - pyinstaller: allows the script to function as a standalone application
 
 ---
+
 
 **Installation Instructions**
 
@@ -62,12 +88,23 @@ As an added bonus, the encrypted file uses your device as the key. Even if the A
     
 4: Install dependencies     
   - pip install customtkinter requests pandas tabulate pillow cryptography
+
+  - For the NF edition run: pip install customtkinter requests pandas tabulate pillow pycryptodome
     
-5: Run: python ip_recon_gui.py
+5: Run the application 
+  - python ip_recon_gui.py
+
+   or
+   
+  - Run: python ip_recon_gui_NF.py
 
 ---
 
 **To create a stand alone .exe**
 
-- pip install pyinstaller
+1. pip install pyinstaller
   - pyinstaller --onefile --windowed --add-data "IPReconBanner.png;." --icon=IPReconIcon.ico --name "IP Recon" ip_recon_gui.py
+
+or
+
+  - pyinstaller --onefile --windowed --add-data "IPReconBanner.png;." --icon=IPReconIcon.ico --name "IP Recon" ip_recon_gui_NF.py 
