@@ -20,7 +20,7 @@ You can get an API key free at [AbuseIPDB.com](https://www.abuseipdb.com/)
 
 
 <div align="center">
-  <h2>Chose Your Encryption Method</h2>
+  <h2>Choose Your Encryption Method</h2>
 </div>
 
 **FERNET API ENCRYPTION** - Standard Edition: ip_recon_gui.py
