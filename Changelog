@@ -18,4 +18,4 @@
 
 3/24/2025
   Released RP Recon NF Edition: This edition uses non-stored password based AES encryption instead of fernet. 
-  This should be more friendly to managed devices that may no appreciate IP Recon using machine statistics as an encryption key.
+  This should be more friendly to managed devices that may not appreciate IP Recon using machine statistics as an encryption key.
