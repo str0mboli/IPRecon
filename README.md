@@ -25,7 +25,7 @@ You can get an API key free at [AbuseIPDB.com](https://www.abuseipdb.com/)
 
 **FERNET API ENCRYPTION** - Standard Edition: ip_recon_gui.py
 
-After you enter your API key, it is saved as an ecrypted file using AES and fernet technologies. You wont have to enter your API again.
+After you enter your API key, it is saved as an encrypted file using AES and fernet technologies. You wont have to enter your API again.
 As an added bonus, the encrypted file uses your device as the key. Even if the API file was stolen it is useless unless ran on the machine that created it.
 
 -https://cryptography.io/en/latest/fernet/
