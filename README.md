@@ -6,7 +6,13 @@
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/G2G61BDMMC)
 
+---
+
 Current Version: 1.02
+
+<a href="https://apps.microsoft.com/detail/9NV2JDZZSBGC?mode=direct" target="_blank" rel="noopener noreferrer">
+	<img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/>
+</a>
 
 A Bulk IP Reputation Checker
 
